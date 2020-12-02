@@ -1,0 +1,131 @@
+@import '~antd/dist/antd.less';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    overflow-y: overlay;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1600px;
+}
+
+#logo {
+    text-align: center;
+}
+
+.pageLayout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+.box {
+    background-color: #ffffff;
+    padding: 50px 100px;
+    width: 800px;
+    // height: 600px;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 100px;
+    text-align: right;
+    box-shadow: 10px 5px 3px 1px rgb(185, 184, 184);
+
+}
+
+
+.box .ant-input-group-addon {
+    color: rgb(172, 22, 22);
+}
+
+.box .ant-input-group-addon svg {
+    color: rgb(9, 128, 9);
+}
+
+.box .boxval {
+    transition: all 3s;
+}
+
+
+.ant-layout-content {
+    background-color: rgb(255, 255, 255);
+    // border:1px solid brown;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    // padding: 50px 0;
+    // height: 100%;
+    margin-top: 134px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.indexpagediv {
+    width: 1200px;
+    height: 100%;
+    margin:20px auto;
+    border-bottom: 1px solid rgb(129,144,173);
+    padding: 30px;
+
+}
+
+.ant-layout-content a {
+    color: black;
+}
+
+.ant-pagination {
+    text-align: center;
+}
+
+.mousedowntable {
+    background-color: rgba(76, 137, 175, 0.822);
+}
+
+.recordingtable .ant-table-tbody>tr>td {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+// .recordingtable .ant-table-tbody>tr:hover{
+.mouseovertable {
+    transition-property: background-color;
+    transition: 0.5s;
+    background-color: rgba(129, 178, 235, 0.137) ;
+}
+
+.mouseuptable {
+    transition-property: background-color;
+    transition: 0.4s;
+    background-color:  rgba(85, 140, 175, 0.425);
+}
+
+.ant-divider.ant-divider-horizontal{
+    color: #262626;
+}
+
+.ant-image-img{
+    width: auto;
+}
+
+tr.ant-table-expanded-row .ant-descriptions-view table{
+    width: 100%;
+}
+
+tr.ant-table-expanded-row > td, tr.ant-table-expanded-row:hover > td{
+    background-color:rgba(255, 255, 255, 0);
+}
+
+.ant-input-wrapper.ant-input-group{
+    width: 70%;
+    margin: 20px auto;
+}
+
+.ant-table-expanded-row{
+    box-shadow: 0 0 5px 0 inset;
+}

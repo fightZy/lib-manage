@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Layout } from 'antd'
+import Header from './component/header';
+import './static/css/index.less'
+import IndexRouter from './router';
+import Container from './component/container';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout className="pageLayout">
+      <Header />
+      <Layout.Content style={{minWidth:'1500px'}}>
+        
+        <IndexRouter />
+        
+      </Layout.Content>
+      
+      <Layout.Footer style={{textAlign:'center'}}>lib @2020  Created by ye</Layout.Footer>
+    </Layout>
   );
 }
 
