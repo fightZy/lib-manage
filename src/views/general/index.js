@@ -3,14 +3,7 @@ import { Carousel, Empty,Image } from 'antd';
 import Container from "../../component/container";
 
 export default function IndexPage(props) {
-    console.log(props);
-    const contentStyle = {
-        height: '600px',
-        color: '#fff',
-        lineHeight: '600px',
-        textAlign: 'center',
-        background: '#364d79',
-    };
+    // console.log(props);
     // todo 后端返回首页数据 data
     let data = {
         imglist: [{

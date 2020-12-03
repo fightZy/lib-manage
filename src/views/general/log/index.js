@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 import { useAdminlog, useLog } from '../../../store/action/index';
 
 export default function Log(props) {
-    // let state = useSelector(state => state);
-    // console.log(props);
+    
     let {location:{state}} =  props;
     // console.dir(state);
     useEffect(()=>{

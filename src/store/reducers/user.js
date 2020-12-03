@@ -1,16 +1,9 @@
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
 
 const user = (state = {
     admin:false,
     log: false,
     username: null,
-    notice:[
-        {
-            title:'欢迎使用 图书管理系统',
-            sender:'图书系统',
-            content:'请仔细阅读以下使用手册balbal....'
-        }
-    ]
 }, action) => {
     switch (action.type) {
         case 'LOG':

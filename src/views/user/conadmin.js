@@ -1,4 +1,4 @@
-import { Col, Input, Row, Space, Upload, Modal, Divider, Button, Image } from 'antd';
+import { Col, Input, Row, Upload, Modal, Divider, Button, Image } from 'antd';
 import { PlusOutlined, WhatsAppOutlined,FileImageOutlined } from '@ant-design/icons';
 import React, { useState } from 'react';
 

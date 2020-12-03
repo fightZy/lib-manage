@@ -11,46 +11,48 @@ body {
 }
 
 .container {
-    margin: 0 auto;
-    width: 1600px;
+    margin: auto;
+    width: 90vw;
 }
 
-#logo {
-    text-align: center;
-}
 
-.pageLayout {
+
+.pageLayout {// todo 注册新用户
     display: flex;
     min-height: 100vh;
+    min-width: 100vw;
 }
 
 
 
 .box {
-    background-color: #ffffff;
-    padding: 50px 100px;
-    width: 800px;
-    // height: 600px;
+    background-color: #ffffffc4;
+    padding: 40px 90px;
+    width: 50vw;
+    height: 50vh;
     border: 1px solid rgb(202, 202, 202);
     border-radius: 4px;
-    margin: 0 auto;
-    margin-top: 100px;
-    text-align: right;
+    margin: auto ;
+    // margin-left: 10%;
     box-shadow: 10px 5px 3px 1px rgb(185, 184, 184);
 
 }
 
 
-.box .ant-input-group-addon {
-    color: rgb(172, 22, 22);
-}
-
-.box .ant-input-group-addon svg {
-    color: rgb(9, 128, 9);
-}
-
 .box .boxval {
     transition: all 3s;
+}
+
+@media screen and (max-width:576px){
+    #logo {
+        text-align: center;
+        font-size: 16px;
+    }
+}
+@media screen and (min-width:577px){
+    #logo {
+        text-align: center;
+    }
 }
 
 
@@ -68,10 +70,10 @@ body {
 }
 
 .indexpagediv {
-    width: 1200px;
+    width: 70vw;
     height: 100%;
-    margin:20px auto;
-    border-bottom: 1px solid rgb(129,144,173);
+    margin: 20px auto;
+    border-bottom: 1px solid rgb(129, 144, 173);
     padding: 30px;
 
 }
@@ -96,36 +98,37 @@ body {
 .mouseovertable {
     transition-property: background-color;
     transition: 0.5s;
-    background-color: rgba(129, 178, 235, 0.137) ;
+    background-color: rgba(129, 178, 235, 0.137);
 }
 
 .mouseuptable {
     transition-property: background-color;
     transition: 0.4s;
-    background-color:  rgba(85, 140, 175, 0.425);
+    background-color: rgba(85, 140, 175, 0.425);
 }
 
-.ant-divider.ant-divider-horizontal{
+.ant-divider.ant-divider-horizontal {
     color: #262626;
 }
 
-.ant-image-img{
+.ant-image-img {
     width: auto;
 }
 
-tr.ant-table-expanded-row .ant-descriptions-view table{
+tr.ant-table-expanded-row .ant-descriptions-view table {
     width: 100%;
 }
 
-tr.ant-table-expanded-row > td, tr.ant-table-expanded-row:hover > td{
-    background-color:rgba(255, 255, 255, 0);
+tr.ant-table-expanded-row>td,
+tr.ant-table-expanded-row:hover>td {
+    background-color: rgba(255, 255, 255, 0);
 }
 
-.ant-input-wrapper.ant-input-group{
+.ant-input-wrapper.ant-input-group {
     width: 70%;
     margin: 20px auto;
 }
 
-.ant-table-expanded-row{
+.ant-table-expanded-row {
     box-shadow: 0 0 5px 0 inset;
 }

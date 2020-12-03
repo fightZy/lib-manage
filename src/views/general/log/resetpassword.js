@@ -25,7 +25,7 @@ export default function Resetpassword() {
                 onClick={() => {
                     // 验证学号姓名
                     // 修改密码 
-                    // todo 修改用户密码 (可以先不做)
+                    // todo 修改用户密码 
 
                 }}
             >修改</Button>

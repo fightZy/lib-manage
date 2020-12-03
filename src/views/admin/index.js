@@ -1,12 +1,16 @@
-import React, { Fragment, useRef, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Button, Carousel, Image, Upload, Modal, Input } from 'antd';
 import { FormOutlined, FileImageOutlined, PlusOutlined, MinusOutlined } from '@ant-design/icons';
 import Container from "../../component/container";
-
+import { toGetindex } from "../../store/http";
 export default function IndexAdmin(props) {
 
 
-
+    // 挂载获取数据
+    // useEffect(async ()=>{
+    //     let res = await toGetindex();
+    //     console.log(res);
+    // })
     // todo 后台返回图片数据，imglist和plist
     let imglist = [
         {

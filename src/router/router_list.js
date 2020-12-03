@@ -59,8 +59,13 @@ const routes = [{
     }
 }, {
     path: "/center",
-    //  这里不能使用精准匹配，否则下面的路由匹配不到
-    redirect:{need:"log",to:"/log",state:"请先登录"},
+    // 这里不能使用精准匹配，否则下面的子路由匹配不到
+    // 路由鉴权重定向
+    redirect: {
+        need: "log",
+        to: "/log",
+        state: "请先登录"
+    },
     render(props) {
         return <Center {...props} />
     },
@@ -105,56 +110,56 @@ const routes = [{
 }, {
     path: "/conadmin",
     exact: true,
-    redirect:{need:"log",to:"/log",state:"请先登录"},
+    redirect: { need: "log", to: "/log", state: "请先登录" },
     render(props) {
         return <Conadmin {...props} />
     }
 }, {
     path: "/indexadmin",
     exact: true,
-    redirect:{need:"admin",to:"/",state:"您没有该权限"},
+    redirect: { need: "admin", to: "/", state: "您没有该权限" },
     render(props) {
         return <IndexAdmin {...props} />
     }
 }, {
     path: "/managebooks",
-    redirect:{need:"admin",to:"/",state:"您没有该权限"},
+    redirect: { need: "admin", to: "/", state: "您没有该权限" },
     render(props) {
         return <Managebooks {...props} />
     },
-    children:[
+    children: [
         {
-            path:'/managebooks',
+            path: '/managebooks',
             exact: true,
-            render(props){
-                return <Overview {...props}/>
+            render(props) {
+                return <Overview {...props} />
             }
         },
         {
-            path:'/managebooks/warehousing',
+            path: '/managebooks/warehousing',
             exact: true,
-            render(props){
-                return <Warehousing {...props}/>
+            render(props) {
+                return <Warehousing {...props} />
             }
         }
     ]
 }, {
     path: "/manageusers",
-    redirect:{need:"admin",to:"/",state:"您没有该权限"},
+    redirect: { need: "admin", to: "/", state: "您没有该权限" },
     render(props) {
         return <Manageusers {...props} />
     },
-    children:[
+    children: [
         {
-            path:'/manageusers',
-            render(props){
-                return <Allusers {...props}/>
+            path: '/manageusers',
+            render(props) {
+                return <Allusers {...props} />
             }
         },
         {
-            path:'/manageusers/message',
-            render(props){
-                return <Message {...props}/>
+            path: '/manageusers/message',
+            render(props) {
+                return <Message {...props} />
             }
         }
     ]

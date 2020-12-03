@@ -1,8 +1,7 @@
-import { Button, Collapse, Descriptions, Input, Table } from 'antd';
+import { Button, Descriptions, Input, Table } from 'antd';
 import { CheckOutlined, CloseCircleOutlined } from '@ant-design/icons'
 import React, { Fragment, useState } from 'react';
 import Search from 'antd/lib/input/Search';
-const { Panel } = Collapse;
 const { Item } = Descriptions;
 export default function Overview() {
 
@@ -123,7 +122,7 @@ function Desctipt(props) {
                     <Item label="简介" span={3}><Input value={descript} onChange={({ target: { value } }) => { setitem({ descript: value }) }} /></Item>
                     <Item label="拥有数量"><Input value={sumn} onChange={({ target: { value } }) => { setitem({ sumn: value }) }} /></Item>
                     <Item label="已借出">{`${lendn}本`}</Item>
-                    <Item label="可借状态">{bookstatus == '1' ? <CheckOutlined style={{ color: "#7ed321" }} /> : <CloseCircleOutlined style={{ color: "red" }} />}</Item>
+                    <Item label="可借状态">{bookstatus === '1' ? <CheckOutlined style={{ color: "#7ed321" }} /> : <CloseCircleOutlined style={{ color: "red" }} />}</Item>
                 </Fragment>
                 :
                 <Fragment>
@@ -135,7 +134,7 @@ function Desctipt(props) {
                     <Item label="简介" span={3}>{descript}</Item>
                     <Item label="拥有数量">{`${sumn}本`}</Item>
                     <Item label="已借出">{`${lendn}本`}</Item>
-                    <Item label="可借状态">{bookstatus == '1' ? <CheckOutlined style={{ color: "#7ed321" }} /> : <CloseCircleOutlined style={{ color: "red" }} />}</Item>
+                    <Item label="可借状态">{bookstatus === '1' ? <CheckOutlined style={{ color: "#7ed321" }} /> : <CloseCircleOutlined style={{ color: "red" }} />}</Item>
                 </Fragment>
         }
 

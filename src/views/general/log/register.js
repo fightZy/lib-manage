@@ -1,22 +1,27 @@
-import React, { Fragment, useState } from 'react';
-import { Button, Form, Input, Space } from 'antd';
-import { UserOutlined, EditOutlined, FieldBinaryOutlined, CheckOutlined } from '@ant-design/icons';
-import { useID, useName, usePassword, useSame } from '../../../hooks/log/localval';
+import React from 'react';
+import { Button, Form, Input } from 'antd';
+import { toRegister } from '../../../store/http';
 
-import Container from '../../../component/container';
 
 export default function Register(props) {
     
 
-    return <div style={{width:"600px",height:"400px",margin:"auto 200px auto auto",padding:"10px",border:"1px solid black",borderRadius:"5px"}}>
+    return <div className="box">
         
             <Form
-                
                 name='register'
                 scrollToFirstError={true}
-                onFinish={(value) => { console.log(value); }}
+                onFinish={async (value) => { 
+                    
+                    // console.log(value);
+                    let {id,username,password} = value;
+                    // todo 注册新用户
+                    // let res = await toRegister(id,username,password);
+
+
+                 }}
             >
-                <Form.Item><h2>注册新用户</h2></Form.Item>
+                <Form.Item style={{textAlign:"center",fontSize:24,color:"#8c8c8c"}}>新用户注册</Form.Item>
                 <Form.Item name="id" label="学号"
                     rules={[
                         {
@@ -53,7 +58,7 @@ export default function Register(props) {
                         },
                         ({ getFieldValue }) => ({
                             validator(rule, value) {
-                                console.log(rule, value);
+                                // console.log(rule, value);
                                 if (!value || getFieldValue('password') == value) {
                                     return Promise.resolve();
                                 }

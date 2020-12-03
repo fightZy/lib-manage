@@ -3,13 +3,12 @@ import { Layout } from 'antd'
 import Header from './component/header';
 import './static/css/index.less'
 import IndexRouter from './router';
-import Container from './component/container';
 
 function App() {
   return (
     <Layout className="pageLayout">
       <Header />
-      <Layout.Content style={{minWidth:'1500px'}}>
+      <Layout.Content>
         
         <IndexRouter />
         

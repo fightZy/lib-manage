@@ -1,31 +1,19 @@
 import { useDispatch } from 'react-redux';
-import http from '../http';
+import { userlog } from '../http';
 
+// # 连接后端时使用
 const useLog = () => {
     const dispatch = useDispatch();
     return async (name, password) => {
-        http({
-            method: 'post',
-            url: "/login",
-            // headers: { 'Access-Control-Allow-Origin': '*' },
-            // params:{
-            //     name,
-            //     password,
-            // }
-            data: {
-                name,
-                password,
-            }
-        }).then(res => {
-            console.log(res);
-            let {data,headers:{authorization}}  = res;
-            console.log(data,authorization);
-            localStorage.setItem("token",authorization);
+        userlog(name, password).then(res => {
+            let { data, headers: { authorization } } = res;
+            // console.log(data,authorization);
+            localStorage.setItem("token", authorization);
             dispatch({
-                type:'LOG',
+                type: 'LOG',
                 name
             })
-        }).catch(err=>{
+        }).catch(err => {
             console.log(err);
         })
 

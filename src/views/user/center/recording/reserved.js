@@ -1,4 +1,4 @@
-import { Modal, Radio, Space, Table,Tag } from 'antd';
+import { Modal, Radio, Table,Tag } from 'antd';
 import React from 'react';
 import dayjs from 'dayjs';
 import {CheckCircleTwoTone,SmileTwoTone,WarningTwoTone} from '@ant-design/icons';
@@ -65,9 +65,9 @@ export default function Reserved(){
             render:(text)=>{
                 switch (text.status) {
                     case '1':
-                        return <a onClick={()=>{case1(text,username)}}>预约延期</a>
+                        return <a  onClick={()=>{case1(text,username)}}>预约延期</a>
                     case '2':
-                        return <a onClick={()=>{case2(text,username)}}>重新预约</a>
+                        return <a  onClick={()=>{case2(text,username)}}>重新预约</a>
                     default:
                         return '-'
                 }

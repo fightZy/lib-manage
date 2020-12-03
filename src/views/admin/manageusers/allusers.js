@@ -117,6 +117,7 @@ export default function Allusers() {
 }
 
 function Desctipt(props) {
+    // console.log(props);
     let [data, setData] = useState({ ...props });
     let { username, id, phone, borbooks } = data;
     let [edit, setEdit] = useState(false);
@@ -169,6 +170,7 @@ function Desctipt(props) {
 
     </Descriptions>
 }
+
 
 
 function sendsuccend(mes) {

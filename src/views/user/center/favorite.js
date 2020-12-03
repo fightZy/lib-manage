@@ -1,7 +1,5 @@
 import React, { Fragment, useMemo, useState } from 'react';
 import { Button, Card, Checkbox, List, Space } from 'antd';
-// import Item from 'antd/lib/list/Item';
-// import { ConfigConsumer } from 'antd/lib/config-provider';
 
 export default function Favorite(props) {
 

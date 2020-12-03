@@ -24,27 +24,29 @@ function Header() {
     }
 
 
-    return <Layout.Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+    return <Layout.Header style={{ position: 'fixed', zIndex: 1, width: '100vw' }}>
         <Container>
             <Row>
-                <Col span={4}>
+                <Col xl={{ span: 4, push: 0 }} md={{ span: 8, push: 8 }} xs={{ span: 8, push: 8 }} >
                     <h1 id="logo" >
-                        
                         <Link to="/" ><GlobalOutlined /> 图书管理系统</Link>
                     </h1>
                 </Col>
-                <Col span={9}></Col>
+                <Col xl={9} md={5} xs={5}></Col>
                 {
-                    user.log ?
-                        <Col span={3} style={{ color: "#e6f7ff", textAlign: "center" }}>
-                            {`欢迎 ${user.username} `} <span
-                                onClick={() => { outlog() }}
-                                style={{cursor:"pointer"}}
-                            >退出登录</span>
-                        </Col> :
-                        <Col span={3}></Col>
+
+                    <Col xl={{ span: 3, pull: 0 }} md={{ span: 3, pull: 13 }} xs={{ span: 3, pull: 13 }} style={{ color: "#e6f7ff", textAlign: "center" }}>
+                        {
+                            user.log ?
+                                <span
+                                    onClick={() => { outlog() }}
+                                    style={{ cursor: "pointer" }}
+                                >{`${user.username}退出登录`}</span>
+                                : ''
+                        }
+                    </Col>
                 }
-                <Col span={8} >
+                <Col xl={8} md={8} xs={8}>
                     <Nav
                         navs={nav}
                         mode={"horizontal"}

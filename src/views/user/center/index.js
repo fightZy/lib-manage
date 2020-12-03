@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, {  useRef } from 'react';
 import Subnav from '../../../component/subnav';
 import { Col, Row } from 'antd';
 import RegisterRouter from '../../../router/registerrouter';
