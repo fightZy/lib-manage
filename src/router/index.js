@@ -19,13 +19,13 @@ function IndexRouter(props) {
                     // console.log(redirect);
                     
                     // # 路由鉴权
-                    // if(redirect){
-                    //    // 查看用户状态是否符合要求，符合跳转，不符合跳转到指定页面，附带提示信息     
-                    //    return user[redirect.need]?
-                    //    item.render({ ...routerProps, ...props, children })
-                    //    :
-                    //    <Redirect to={{pathname:redirect.to,state:{"info":redirect.state}}} />
-                    // }
+                    if(redirect){
+                       // 查看用户状态是否符合要求，符合跳转，不符合跳转到指定页面，附带提示信息     
+                       return user[redirect.need]?
+                       item.render({ ...routerProps, ...props, children })
+                       :
+                       <Redirect to={{pathname:redirect.to,state:{"info":redirect.state}}} />
+                    }
                     return item.render({ ...routerProps, ...props, children });
                 }}
             />
